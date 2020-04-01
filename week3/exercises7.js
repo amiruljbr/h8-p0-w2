@@ -13,7 +13,6 @@ function hitungJumlahKata(kalimat) {
 			kata1 ='';
 		}
 	}
-	console.log(kata);
 	return kata.length;
 }
 
