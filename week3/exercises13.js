@@ -19,7 +19,7 @@ function targetTerdekat(arr) {
 	}
 	for ( var j=0; j <counto; j++){
 		for ( var i=0; i <countx; i++){
-			jarakxo = Math.abs(letakx[i] - letako[j]);
+			var jarakxo = Math.abs(letakx[i] - letako[j]);
 			jarak.push(jarakxo);
 		}
 	}
