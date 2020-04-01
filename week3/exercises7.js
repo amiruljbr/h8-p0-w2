@@ -8,7 +8,7 @@ function hitungJumlahKata(kalimat) {
 			if (i==kalimat.length-1){
 				kata.push(kata1);
 			}
-		} else {
+		} else if (kata1 != '' && kata1 !=' ') { //validasi agar kata1 tidak berisi kosong dan tidak berisi spasi
 			kata.push(kata1);
 			kata1 ='';
 		}
@@ -18,8 +18,8 @@ function hitungJumlahKata(kalimat) {
 }
 
 // TEST CASES
-console.log(hitungJumlahKata('I have a dream')); // 4
-console.log(hitungJumlahKata('Never eat shredded wheat or cake')); // 6
-console.log(hitungJumlahKata('A song to sing')); // 4
-console.log(hitungJumlahKata('I')); // 1
-console.log(hitungJumlahKata('I believe I can code')); // 5
+console.log(hitungJumlahKata(' I have   a dream  ')); // 4
+console.log(hitungJumlahKata('Never  eat shredded   wheat or cake')); // 6
+console.log(hitungJumlahKata('   A  song to  sing')); // 4
+console.log(hitungJumlahKata('I   ')); // 1
+console.log(hitungJumlahKata('I  believe   I can code    ')); // 5
