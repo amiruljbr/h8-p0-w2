@@ -1,4 +1,4 @@
-var data = ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"]
+var data = ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"];
 
   //  Buatlah sebuah function dengan nama dataHandling2 yang akan menerima input array seperti di atas.
 
@@ -14,7 +14,7 @@ function dataHandling2 (data){
 	return data;
 }
 
-data2= dataHandling2(data);
+var data2= dataHandling2(data);
 console.log(data2); 
 
 /*
@@ -23,11 +23,8 @@ console.log(data2);
         Format tanggal pada data adalah dd-mm-YYYY
         Misal angka bulan 01, tuliskan "Januari"
         Gunakan switch case untuk menuliskan bulan di atas.
-
     Pada array hasil split dari tanggal/bulan/tahun, lakukan sorting secara descending dan console.log array yang sudah di-sort.
-
     Masih pada array hasil split dari elemen tanggal/bulan/tahun, gabungkan semua elemen menggunakan join dan pisahkan dengan karakter strip (-) lalu console.log hasilnya.
-
     Nama (elemen ke-2), harus dibatasi sebanyak 15 karakter saja. Gunakan slice untuk menghapus kelebihan karakter dan console.log nama yang sudah di-slice, sebelum di-slice pastikan Nama (elemen ke-2) sudah dalam bentuk String agar bisa di-slice.
 */
 
@@ -75,7 +72,7 @@ switch (hari[1]) {
 } 
 
 //ouput ketiga
-var haridesc = hari.sort(function(a, b){return b - a});
+var haridesc = hari.sort(function(a, b){return b - a;});
 console.log(haridesc);
 
 //output keempat
