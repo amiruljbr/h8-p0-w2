@@ -1,5 +1,7 @@
 function angkaPrima(angka) {
-	if (angka == 2) {
+	if (angka <2){
+		return false
+	} else if (angka == 2) {
 		return true
 	} else {
 		for(var i=2;i < angka; i++){
@@ -17,3 +19,7 @@ console.log(angkaPrima(7)); // true
 console.log(angkaPrima(6)); // false
 console.log(angkaPrima(23)); // true
 console.log(angkaPrima(33)); // false
+console.log(angkaPrima(1)); // false
+console.log(angkaPrima(-33)); // false
+console.log(angkaPrima(767)); // true
+console.log(angkaPrima(0)); // false

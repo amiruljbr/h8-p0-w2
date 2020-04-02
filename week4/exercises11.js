@@ -1,14 +1,3 @@
-// Hello.
-//
-// This is JSHint, a tool that helps to detect errors and potential
-// problems in your JavaScript code.
-//
-// To start, simply enter some JavaScript anywhere on this page. Your
-// report will appear on the right side.
-//
-// Additionally, you can toggle specific options in the Configure
-// menu.
-
 function shoppingTime(memberId, money) {
 	if (memberId == '' || memberId == false || memberId == undefined){
 		return 'Mohon maaf, toko X hanya berlaku untuk member saja';
@@ -44,7 +33,7 @@ function shoppingTime(memberId, money) {
 }
 
 // TEST CASES
-console.log(shoppingTime('1820RzKrnWn08', 2475000));
+console.log(shoppingTime('1820RzKrnWn08', 2479000));
   //{ memberId: '1820RzKrnWn08',
   // money: 2475000,
   // listPurchased:
