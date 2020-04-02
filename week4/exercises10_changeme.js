@@ -1,18 +1,13 @@
 function changeMe(arr) {
-	var strResult = '';
-	var bioObj = [];
-	for ( var i=0; i< arr.length; i++){
+	for (var i=0; i< arr.length; i++){
 		var bio = { firstName: arr[i][0],
 						lastName: arr[i][1],
 						gender: arr[i][2],
 						age: 2019 - arr[i][3] 
 						};
-		bioObj.push(bio);
-		strResult += `${i+1}. ${bioObj[i].firstName} ${bioObj[i].lastName}:
-${JSON.stringify(bioObj[i])}
-`;
+		console.log(i+1 + '. ' + bio.firstName + ' ' + bio.lastName + ':');
+		console.log(bio);
 	}
-	return strResult;
 }
 
 // TEST CASES

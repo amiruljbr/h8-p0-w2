@@ -1,29 +1,27 @@
-function dataHandling(arr){
-	var strResult='';
-	for (var i=0; i < arr.length; i++){
-		for (var j=0; j < arr[i].length; j++){
-			if (j==0){
-				strResult += 'Nomor ID: ' + arr[i][j] + '\n';
-			} else if (j==1) {
-				strResult += 'Nama Lengkap: ' + arr[i][j] + '\n';
-			} else if (j==2) {
-				strResult += `TTL: ${arr[i][j]} ${arr[i][j+1]}
-`;
-			} else if (j==4 && i!=arr.length-1) {
-				strResult += 'Hobi: ' + arr[i][j] + '\n' + '\n';
-			} else if (j==4 && i==arr.length-1) {
-				strResult += 'Hobi: ' + arr[i][j];
+function cariMedian(arr) {
+  // you can only write your code here!
+	//Buat Sort untuk inputan
+	for ( var i=0; i<arr.length; i++){
+		for ( var j=0; j<arr.length-1; j++){
+			if (arr[j] > arr[j+1]){
+				var temp = arr[j];
+				arr[j] = arr [j+1];
+				arr[j+1] = temp;
 			}
 		}
 	}
-	return strResult;
+	
+	//dicari mediannya
+	if (arr.length % 2 == 1){
+		return arr[(arr.length-1)/2];
+	} else {
+		return (arr[(arr.length)/2]+arr[(arr.length)/2 -1])/2;
+	}
 }
 
-var input = [
-                ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"],
-                ["0002", "Dika Sembiring", "Medan", "10/10/1992", "Bermain Gitar"],
-                ["0003", "Winona", "Ambon", "25/12/1965", "Memasak"],
-                ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
-            ];
-
-console.log (dataHandling(input));
+// TEST CASES
+console.log(cariMedian([1, 2, 3, 4, 5])); // 3
+console.log(cariMedian([1, 3, 4, 10, 12, 13])); // 7
+console.log(cariMedian([3, 4, 7, 6, 10])); // 6
+console.log(cariMedian([1, 3, 3])); // 3
+console.log(cariMedian([7, 7, 8, 8])); // 7.5
