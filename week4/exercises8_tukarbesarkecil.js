@@ -1,18 +1,16 @@
 function tukarBesarKecil(kalimat) {
-	var hurufkecil = 'abcdefghijklmnopqrstuvwxyz';
+	var kalimatKecil = kalimat.toLowerCase();
 	var hasil='';
-	for (var i=0; i< kalimat.length; i++){
-		var tukarbesar = false;
-		for (var j=0; j<hurufkecil.length; j++){
-			if (kalimat[i] === hurufkecil[j]){
-				tukarbesar = true;
-			}
+	for (var i=0; i<kalimatKecil.length; i++){
+		tukarbesar = false;
+		if (kalimat[i] === kalimatKecil[i]){
+			tukarbesar = true;			
 		}
 		
 		if (tukarbesar){
-			hasil += kalimat[i].toUpperCase();
+			hasil += kalimatKecil[i].toUpperCase();
 		} else {
-			hasil += kalimat[i].toLowerCase();
+			hasil += kalimatKecil[i];
 		}
 	}
 	return hasil;			
