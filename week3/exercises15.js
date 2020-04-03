@@ -1,20 +1,26 @@
 function groupAnimals(animals) {
-  // you can only write your code here!
-	var abjad = 'abcdefghijklmnopqrstuvwxyz';
-	var hasil =[]; //menampung hasil sementara
-	var hasilfinal = []; //hasil final
-	for (var i=0; i<abjad.length; i++){
-		hasil.push([]);
-		for (var j=0;j< animals.length; j++){
-			if (animals[j][0]==abjad[i]){
-				hasil[i].push(animals[j]);
+	var hasil =[];
+	for (var i=0; i<animals.length; i++){
+		var x=true	
+		for (var j=0;j< hasil.length; j++){
+			if (animals[i][0]==hasil[j][0][0]){
+				x=false;
+				hasil[j].push(animals[i]);
 			} 
 		}
-		if (hasil[i] != false){ // cek jika hasil sementara tidak kosong maka akan ditampung ke hasil final
-			hasilfinal.push(hasil[i]);
+		if (x){
+			hasil.push([animals[i]]);
 		}
 	}
-	return hasilfinal;
+	for ( var i=0; i< hasil.length-1; i++){
+		if (hasil[i][0][0]>hasil[i+1][0][0]){
+			var temp = hasil[i];
+			hasil[i]=hasil[i+1];
+			hasil[i+1] = temp;
+		}
+	}
+	
+	return hasil;
 }
 
 // TEST CASES
